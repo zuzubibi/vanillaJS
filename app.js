@@ -1,11 +1,10 @@
-let num1 = 5;
-let num2 = 2;
-let myName = 'noco';
+const daysOfWeek = ['mon', 'tue', 'wed', 'thu', 'fri', 'sat'];
 
-console.log(num1 + num2);
-console.log(num1 / num2);
-console.log(num1 * num2);
-console.log(myName + " hello");
+// Get Item from Array
+console.log(daysOfWeek);
 
-myName = "nicolas";
-console.log("your new name is " + myName);
+// Add one more day to the Array
+daysOfWeek.push("sun")
+
+
+console.log(daysOfWeek); 
