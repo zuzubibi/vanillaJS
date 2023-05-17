@@ -33,6 +33,7 @@ console.log(player.name);
 - isNaN(): 숫자인지 아닌지 판단 (숫자면 False, 숫자 아니면 True)
 - typeof: 타입을 확인할 수 있음 
 - parseInt(): a string to convert into a number. 그리고 python에서의 int()랑 비슷
+
 ```
 console.log(typeof num); 
 ```
@@ -45,5 +46,68 @@ console.log(typeof num);
 
 ```
 const num = prompt("how old are you?"); 
+```
+
+#### 5. document
+
+- console에 입력하면, 작성한 HTML을 가져온다.
+- console.dir(document) : object 형태로 가져온다
+- 제목 찾으려면: document.title
+
+1) getElementsById( );
+
+```
+const title = document.getElementsById("title");
+console.log(title.className);
+```
+
+2. getElementsByClassName( );
+
+- Array를 반환
+
+```
+const hellos = document.getElementsByClassName("hello");
+console.log(hellos);
+```
+
+3. getElementsByTagName( );
+
+- Array 반환
+- Tag란 'anchor', 'div', 'section', 'button' 같은 것을 의미함
+
+```
+const title = document.getElementsByTagName("h1");
+console.log(title);
+```
+
+4. querySelector & querySelectorAll 🩵🩵🩵🩵(중요)
+
+- querySelector: element를 CSS방식으로 검색할 수 있음 
+
+```
+const title = document.querySelector(".hello  h1");
+console.log(title);
+// querySelector에는 hello가 class name이라는 것과 그 안의 h1을 명시해줘야 함
+// getElementsByCalssName("hello")에서 JavaScript는 우리가 class name을 넘겨줄 것을 알고 있음
+```
+
+```
+// 아래 코드들은 동일한 결과값을 반환한다
+const title = document.querySelector("#hello");
+const title = document.getElementById("hello");
+```
+
+5. addEventListener
+
+```
+const title = document.querySelector(".hello:first-child h1");
+
+function handleTitleClick() {
+    title.style.color = "blue"
+}
+
+title.addEventListener("click", handleTitleClick);
+
+handleTitleClick();
 ```
 
